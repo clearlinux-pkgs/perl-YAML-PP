@@ -4,7 +4,7 @@
 #
 Name     : perl-YAML-PP
 Version  : 0.026
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-0.026.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-0.026.tar.gz
 Summary  : 'YAML 1.2 Processor'
@@ -141,31 +141,31 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Common.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Constructor.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Dumper.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Emitter.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Exception.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Grammar.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Highlight.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Lexer.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Loader.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Parser.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Perl.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Reader.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Render.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Representer.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/Binary.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/Core.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/Failsafe.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/Include.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/JSON.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/Merge.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/Perl.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/Tie/IxHash.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Schema/YAML1_1.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Type/MergeKey.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Writer.pm
-/usr/lib/perl5/vendor_perl/5.30.3/YAML/PP/Writer/File.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Common.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Constructor.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Dumper.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Emitter.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Exception.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Grammar.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Highlight.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Lexer.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Loader.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Parser.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Perl.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Reader.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Render.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Representer.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/Binary.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/Core.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/Failsafe.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/Include.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/JSON.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/Merge.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/Perl.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/Tie/IxHash.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Schema/YAML1_1.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Type/MergeKey.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Writer.pm
+/usr/lib/perl5/vendor_perl/5.32.1/YAML/PP/Writer/File.pm
