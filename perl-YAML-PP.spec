@@ -4,7 +4,7 @@
 #
 Name     : perl-YAML-PP
 Version  : 0.027
-Release  : 17
+Release  : 18
 URL      : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-0.027.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-0.027.tar.gz
 Summary  : 'YAML 1.2 Processor'
