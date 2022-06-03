@@ -4,13 +4,14 @@
 #
 Name     : perl-YAML-PP
 Version  : 0.032
-Release  : 24
+Release  : 25
 URL      : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-0.032.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-0.032.tar.gz
 Summary  : 'YAML 1.2 Processor'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-YAML-PP-bin = %{version}-%{release}
+Requires: perl-YAML-PP-license = %{version}-%{release}
 Requires: perl-YAML-PP-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Sub::Uplevel)
@@ -28,6 +29,7 @@ Suite](https://github.com/yaml/yaml-test-suite) and other libraries like
 %package bin
 Summary: bin components for the perl-YAML-PP package.
 Group: Binaries
+Requires: perl-YAML-PP-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-YAML-PP package.
@@ -42,6 +44,14 @@ Requires: perl-YAML-PP = %{version}-%{release}
 
 %description dev
 dev components for the perl-YAML-PP package.
+
+
+%package license
+Summary: license components for the perl-YAML-PP package.
+Group: Default
+
+%description license
+license components for the perl-YAML-PP package.
 
 
 %package perl
@@ -79,6 +89,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-YAML-PP
+cp %{_builddir}/YAML-PP-0.032/LICENSE %{buildroot}/usr/share/package-licenses/perl-YAML-PP/ce5601188e3eaef45d9491ce50709337e05115ef
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -123,33 +135,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/YAML::PP::Writer.3
 /usr/share/man/man3/YAML::PP::Writer::File.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-YAML-PP/ce5601188e3eaef45d9491ce50709337e05115ef
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Common.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Constructor.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Dumper.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Emitter.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Exception.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Grammar.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Highlight.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Lexer.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Loader.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Parser.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Perl.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Reader.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Render.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Representer.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/Binary.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/Core.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/Failsafe.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/Include.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/JSON.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/Merge.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/Perl.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/Tie/IxHash.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Schema/YAML1_1.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Type/MergeKey.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Writer.pm
-/usr/lib/perl5/vendor_perl/5.34.0/YAML/PP/Writer/File.pm
+/usr/lib/perl5/*
