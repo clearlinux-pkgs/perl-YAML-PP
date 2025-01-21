@@ -7,7 +7,7 @@
 #
 Name     : perl-YAML-PP
 Version  : 0.38.0
-Release  : 35
+Release  : 36
 URL      : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.38.0.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.38.0.tar.gz
 Summary  : 'YAML 1.2 Processor'
