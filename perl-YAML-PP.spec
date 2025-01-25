@@ -6,15 +6,14 @@
 # autospec commit: 94c6be0
 #
 Name     : perl-YAML-PP
-Version  : 0.38.0
-Release  : 37
-URL      : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.38.0.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.38.0.tar.gz
+Version  : 0.38.1
+Release  : 38
+URL      : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.38.1.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.38.1.tar.gz
 Summary  : 'YAML 1.2 Processor'
 Group    : Development/Tools
-License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+License  : Artistic-1.0-Perl
 Requires: perl-YAML-PP-bin = %{version}-%{release}
-Requires: perl-YAML-PP-license = %{version}-%{release}
 Requires: perl-YAML-PP-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Sub::Uplevel)
@@ -34,7 +33,6 @@ Suite](https://github.com/yaml/yaml-test-suite) and other libraries like
 %package bin
 Summary: bin components for the perl-YAML-PP package.
 Group: Binaries
-Requires: perl-YAML-PP-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-YAML-PP package.
@@ -51,14 +49,6 @@ Requires: perl-YAML-PP = %{version}-%{release}
 dev components for the perl-YAML-PP package.
 
 
-%package license
-Summary: license components for the perl-YAML-PP package.
-Group: Default
-
-%description license
-license components for the perl-YAML-PP package.
-
-
 %package perl
 Summary: perl components for the perl-YAML-PP package.
 Group: Default
@@ -69,13 +59,13 @@ perl components for the perl-YAML-PP package.
 
 
 %prep
-%setup -q -n YAML-PP-v0.38.0
-cd %{_builddir}/YAML-PP-v0.38.0
+%setup -q -n YAML-PP-v0.38.1
+cd %{_builddir}/YAML-PP-v0.38.1
 pushd ..
-cp -a YAML-PP-v0.38.0 buildavx2
+cp -a YAML-PP-v0.38.1 buildavx2
 popd
 pushd ..
-cp -a YAML-PP-v0.38.0 buildapx
+cp -a YAML-PP-v0.38.1 buildapx
 popd
 
 %build
@@ -100,8 +90,6 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/perl-YAML-PP
-cp %{_builddir}/YAML-PP-v%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-YAML-PP/d8b7a46a702fbcb447755b35a80c613902f9374c || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -136,6 +124,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/YAML::PP::Perl.3
 /usr/share/man/man3/YAML::PP::Schema.3
 /usr/share/man/man3/YAML::PP::Schema::Binary.3
+/usr/share/man/man3/YAML::PP::Schema::Catchall.3
 /usr/share/man/man3/YAML::PP::Schema::Core.3
 /usr/share/man/man3/YAML::PP::Schema::Failsafe.3
 /usr/share/man/man3/YAML::PP::Schema::Include.3
@@ -147,10 +136,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/YAML::PP::Type::MergeKey.3
 /usr/share/man/man3/YAML::PP::Writer.3
 /usr/share/man/man3/YAML::PP::Writer::File.3
-
-%files license
-%defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-YAML-PP/d8b7a46a702fbcb447755b35a80c613902f9374c
 
 %files perl
 %defattr(-,root,root,-)
